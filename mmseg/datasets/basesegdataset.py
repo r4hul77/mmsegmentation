@@ -244,6 +244,7 @@ class BaseSegDataset(BaseDataset):
                 img_name = line.strip()
                 data_info = dict(
                     img_path=osp.join(img_dir, img_name + self.img_suffix))
+
                 if ann_dir is not None:
                     seg_map = img_name + self.seg_map_suffix
                     data_info['seg_map_path'] = osp.join(ann_dir, seg_map)
