@@ -92,4 +92,4 @@ val_dataloader = dict(batch_size=64,
                           data_root=data_root,
                           data_prefix=dict(img_path='img_dir/val', seg_map_path='ann_dir/val'),
                           pipeline=test_pipeline))
-val_evaluator = dict(type='LARSMetric')
+val_evaluator = dict(type='IoUMetric', iou_metrics=['mIoU'])
